@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="heR-Nk-McG" customClass="WalletAccountActionCell" customModule="ARLandOne" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="heR-Nk-McG" id="eng-df-RZ7">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poV-pA-mf3">
+                        <rect key="frame" x="90" y="6" width="40" height="30"/>
+                        <state key="normal" title="SEND"/>
+                        <connections>
+                            <action selector="onTapSend:" destination="heR-Nk-McG" eventType="touchUpInside" id="OkE-gZ-Or2"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6O-Eq-2gB">
+                        <rect key="frame" x="265" y="6" width="60" height="30"/>
+                        <state key="normal" title="RECEIVE"/>
+                        <connections>
+                            <action selector="onTapReceive:" destination="heR-Nk-McG" eventType="touchUpInside" id="h6C-Yu-Ytf"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="o6O-Eq-2gB" firstAttribute="top" secondItem="eng-df-RZ7" secondAttribute="top" constant="6" id="4xF-UG-Qv3"/>
+                    <constraint firstAttribute="bottom" secondItem="poV-pA-mf3" secondAttribute="bottom" constant="7.5" id="GOx-zO-iFh"/>
+                    <constraint firstItem="poV-pA-mf3" firstAttribute="leading" secondItem="eng-df-RZ7" secondAttribute="leading" constant="90" id="ITa-iK-fmw"/>
+                    <constraint firstItem="poV-pA-mf3" firstAttribute="top" secondItem="eng-df-RZ7" secondAttribute="top" constant="6" id="abq-i4-3fy"/>
+                    <constraint firstAttribute="trailing" secondItem="o6O-Eq-2gB" secondAttribute="trailing" constant="50" id="ijK-kk-vkY"/>
+                    <constraint firstAttribute="bottom" secondItem="o6O-Eq-2gB" secondAttribute="bottom" constant="7.5" id="uV5-Fz-R34"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-31.5" y="43"/>
+        </tableViewCell>
+    </objects>
+</document>

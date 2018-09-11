@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rz0-hs-x5f">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Meow Navigation View Controller-->
+        <scene sceneID="9Tn-RQ-2v7">
+            <objects>
+                <navigationController storyboardIdentifier="WalletMain" id="rz0-hs-x5f" customClass="MeowNavigationViewController" customModule="ARLandOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <size key="freeformSize" width="300" height="400"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dhu-pw-fMQ">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Kyn-aU-pBd" kind="relationship" relationship="rootViewController" id="wGT-UQ-LdB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kxQ-yz-NZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-596" y="146"/>
+        </scene>
+        <!--Wallet View Controller-->
+        <scene sceneID="DwS-Kp-C9R">
+            <objects>
+                <viewController id="Kyn-aU-pBd" customClass="WalletViewController" customModule="ARLandOne" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="86n-2c-WMa">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GnX-vL-a0Z"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="akZ-7W-qBd"/>
+                    <connections>
+                        <segue destination="baQ-sm-bVS" kind="show" identifier="showWalletInfo" id="7eL-SE-TB3"/>
+                        <segue destination="9i1-RP-Qd2" kind="show" identifier="showSetting" id="Dzj-lG-6dy"/>
+                        <segue destination="I2O-lN-9U6" kind="show" identifier="showSend" id="vth-7N-EfV"/>
+                        <segue destination="Yc6-iM-YUb" kind="show" identifier="showReceive" id="lmk-xO-be9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pS7-Ua-Fno" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281.60000000000002" y="144.82758620689657"/>
+        </scene>
+        <!--Send Ether View Controller-->
+        <scene sceneID="Awh-41-PFQ">
+            <objects>
+                <viewController id="I2O-lN-9U6" customClass="SendEtherViewController" customModule="ARLandOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KFP-3g-DLb">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4zz-Wh-gNQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gsf-Wr-450" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959" y="-373"/>
+        </scene>
+        <!--Receive Ether View Controller-->
+        <scene sceneID="FEC-GD-wFM">
+            <objects>
+                <viewController id="Yc6-iM-YUb" customClass="ReceiveEtherViewController" customModule="ARLandOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fy7-jk-ImT">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SdE-ME-DaV">
+                                <rect key="frame" x="86" y="118" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="Osx-Fk-acU"/>
+                                    <constraint firstAttribute="height" constant="128" id="XfO-qC-35I"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETH_ADDRESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWY-HU-iUp">
+                                <rect key="frame" x="117" y="286" width="66" height="11"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oWY-HU-iUp" firstAttribute="centerX" secondItem="uyW-m2-7Zb" secondAttribute="centerX" id="GIl-vm-3AM"/>
+                            <constraint firstItem="oWY-HU-iUp" firstAttribute="top" secondItem="SdE-ME-DaV" secondAttribute="bottom" constant="40" id="QZE-p6-dwi"/>
+                            <constraint firstItem="SdE-ME-DaV" firstAttribute="centerX" secondItem="uyW-m2-7Zb" secondAttribute="centerX" id="ein-pL-diO"/>
+                            <constraint firstItem="SdE-ME-DaV" firstAttribute="top" secondItem="uyW-m2-7Zb" secondAttribute="top" constant="74" id="hct-Az-r1X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uyW-m2-7Zb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SPS-qL-bYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750" y="-373"/>
+        </scene>
+        <!--Wallet Info View Controller-->
+        <scene sceneID="qaF-QI-kHz">
+            <objects>
+                <viewController id="baQ-sm-bVS" customClass="WalletInfoViewController" customModule="ARLandOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SVv-vE-tAZ">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0eD-Ar-0Vt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8p6-wH-0fM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="159"/>
+        </scene>
+        <!--Wallet Setting View Controller-->
+        <scene sceneID="SKc-3C-pim">
+            <objects>
+                <viewController id="9i1-RP-Qd2" customClass="WalletSettingViewController" customModule="ARLandOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pFP-A3-15u">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RBd-fJ-eki"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jvn-aU-cbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="694"/>
+        </scene>
+        <!--Meow Navigation View Controller-->
+        <scene sceneID="7DS-4B-FYz">
+            <objects>
+                <navigationController storyboardIdentifier="LockScreen" id="OQL-M9-rm7" customClass="MeowNavigationViewController" customModule="ARLandOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <size key="freeformSize" width="300" height="400"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="phu-sd-lkl">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nu3-Tt-fzD" kind="relationship" relationship="rootViewController" id="DMH-OV-lfj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ocm-BV-P8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1373" y="645"/>
+        </scene>
+        <!--Lock Screen View Controller-->
+        <scene sceneID="dUF-fJ-RMi">
+            <objects>
+                <viewController storyboardIdentifier="PasscodeVC" id="nu3-Tt-fzD" customClass="LockScreenViewController" customModule="ARLandOne" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="za5-BS-Inz">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="za7-3a-Xi6">
+                                <rect key="frame" x="102" y="141" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Passcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbM-Pa-eUp">
+                                <rect key="frame" x="91" y="98" width="119" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NB-iH-CXt">
+                                <rect key="frame" x="132" y="248" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clear"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PZl-YY-mAD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LFS-q3-eD5"/>
+                    <connections>
+                        <segue destination="Kyn-aU-pBd" kind="show" identifier="showMain" id="QFH-Zs-HBg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LgT-4v-RBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-597" y="645"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QFH-Zs-HBg"/>
+    </inferredMetricsTieBreakers>
+</document>
